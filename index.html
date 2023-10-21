@@ -70,7 +70,7 @@
                 <p>* - Required Fields</p>
 
                 <label for="prodid"><b>Product ID <span class='text-danger'>*</span></b></label>
-                <input type="text" readonly value="EVNT-DRIV-MID-1">
+                <input type="text" id="prodid" readonly value="EVNT-DRIV-MID-1">
 
                 <label for="prodname"><b>Product Name <span class='text-danger'>*</span></b></label>
                 <input type="text" id="prodname">
@@ -198,6 +198,7 @@
 
             updateTable();
             updateCategoryCounts();
+            document.getElementById('prodid').value = productID;
         }
 
         function updateTable(filteredProducts = products) {
